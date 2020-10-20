@@ -1,3 +1,5 @@
+import env
+
 def show_main_menu():
     print("1: Option 1")
     print("2: Option 2")
@@ -12,6 +14,7 @@ while option != 0:
     if option == 1:
         # do stuff here
         print("You selected option 1")
+        print("Timeout is: {}".format(env.timeout))
     elif option == 2:
         # do stuff here
         print("You selected option 2")
