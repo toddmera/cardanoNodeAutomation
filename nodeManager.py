@@ -25,4 +25,4 @@ while option != 0:
         # do stuff here
         print("You selected an  invalid option.")
     show_main_menu()
-    option = int(input("Enter your option:"))2
+    option = int(input("Enter your option:"))
