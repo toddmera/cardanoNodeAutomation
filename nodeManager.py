@@ -1,4 +1,6 @@
 import env
+# import os
+
 
 # Main menu where it all starts
 def show_main_menu():
@@ -8,10 +10,17 @@ def show_main_menu():
     print("4: Option 4")
     print("0: Exit")
 
+# Wallet menu for creating, listing and managing wallets
 def show_wallet_menu():
-    print("1: Option 1")
-    print("2: Option 2")
+    print("1: List Wallet")
+    print("2: Create Wallet")
     print("0: Main Menu")
+
+def get_protocol_params():
+    # Dump protocol parameters to temp location
+    # cardano-cli shelley query protocol-parameters --mainnet --out-file protocol.json
+    cmd_params = env.CCLI
+    print(cmd_params)
 
 show_main_menu()
 option = int(input("Enter your option:"))
@@ -32,6 +41,7 @@ while option != 0:
     elif option == 2:
         # do stuff here
         print("You selected option 2")
+        get_protocol_params()
     elif option == 3:
         # do stuff here
         print("You selected option 3")
