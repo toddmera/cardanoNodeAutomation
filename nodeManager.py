@@ -19,8 +19,11 @@ def show_wallet_menu():
 def get_protocol_params():
     # Dump protocol parameters to temp location
     # cardano-cli shelley query protocol-parameters --mainnet --out-file protocol.json
-    cmd_params = env.CCLI
+
+def get_wallet_value():
+    cmd_params = env.CCLI + '--address $(cat payment.addr) --testnet-magic 1097911063'
     print(cmd_params)
+    os.system(cmd_params)
 
 show_main_menu()
 option = int(input("Enter your option:"))
@@ -36,13 +39,16 @@ while option != 0:
                 print("You selected option 1")
             elif option == 2:
                 print("You selected Option 2")
+            elif option == 0:
+                show_wallet_menu()
             else:
                 print("Invalid option")
                 option = 0
+            option = int(input("Enter your option:"))
     elif option == 2:
         # do stuff here
         print("You selected option 2")
-        get_protocol_params()
+        get_wallet_value()
     elif option == 3:
         # do stuff here
         print("You selected option 3")
