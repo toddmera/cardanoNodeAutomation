@@ -1,6 +1,5 @@
-import os
-
-CCLI=os.path.expanduser("~") + '/.local/bin/cardano-cli'  # Override automatic detection of path to cardano-cli executable
+CCLI = CCLI='${HOME}/.local/bin/cardano-cli'
+# CCLI=os.path.expanduser("~") + '/.local/bin/cardano-cli'  # Override automatic detection of path to cardano-cli executable
 # CNODE_HOME="${HOME}/cardano-node"                       # Override default CNODE_HOME path (defaults to /opt/cardano/cnode)
 # CNODE_PORT=3000                                         # Set node port
 # CONFIG="${CNODE_HOME}/config/config.json"               # Override automatic detection of node config path
