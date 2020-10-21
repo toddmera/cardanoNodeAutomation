@@ -1,5 +1,6 @@
 import env
 import os
+import subprocess
 
 
 # Main menu where it all starts
@@ -23,8 +24,8 @@ def get_protocol_params():
 
 def get_wallet_value():
     cmd_params = env.CCLI + '--address $(cat payment.addr) --testnet-magic 1097911063'
-    print(cmd_params)
-    os.system(cmd_params)
+    print(cmd_wallet_val)
+    subprocess.call(cmd_wallet_val, shell=True)
 
 show_main_menu()
 option = int(input("Enter your option:"))
