@@ -23,7 +23,7 @@ def get_protocol_params():
     print("need to do some stuff here")
 
 def get_wallet_value():
-    cmd_wallet_val = env.CCLI + '--address $(cat payment.addr) --testnet-magic 1097911063'
+    cmd_wallet_val = env.CCLI + " --address $(cat payment.addr) --testnet-magic 1097911063"
     print(cmd_wallet_val)
     subprocess.call(cmd_wallet_val, shell=True)
 
