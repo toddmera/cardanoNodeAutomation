@@ -19,6 +19,7 @@ def show_wallet_menu():
 def get_protocol_params():
     # Dump protocol parameters to temp location
     # cardano-cli shelley query protocol-parameters --mainnet --out-file protocol.json
+    print("need to do some stuff here")
 
 def get_wallet_value():
     cmd_params = env.CCLI + '--address $(cat payment.addr) --testnet-magic 1097911063'
