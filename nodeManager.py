@@ -1,5 +1,5 @@
 import env
-# import os
+import os
 
 
 # Main menu where it all starts
@@ -38,6 +38,7 @@ while option != 0:
                 print("You selected Option 2")
             else:
                 print("Invalid option")
+                option = 0
     elif option == 2:
         # do stuff here
         print("You selected option 2")
